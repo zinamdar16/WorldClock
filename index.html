@@ -3,33 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>World Clock</title>
+  <title>🌍 World Clock</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>🌍 World Clock</h1>
-    <button id="themeToggle">Toggle Theme</button>
+    <button id="themeToggle">🌓 Toggle Theme</button>
   </header>
 
-  <section class="controls">
-    <label for="citySelect">Select a city:</label>
-    <select id="citySelect">
-      <option value="America/New_York">New York</option>
-      <option value="Europe/London">London</option>
-      <option value="Asia/Tokyo">Tokyo</option>
-      <option value="Asia/Kolkata">India (IST)</option>
-      <option value="Australia/Sydney">Sydney</option>
-    <option value="Saudi/Riyadh">Riyadh</option>
-    </select>
-  </section>
+  <main>
+    <section class="controls">
+      <label for="citySelect">Choose a city:</label>
+      <select id="citySelect">
+        <option value="America/New_York" data-flag="us">New York</option>
+        <option value="Europe/London" data-flag="gb">London</option>
+        <option value="Asia/Tokyo" data-flag="jp">Tokyo</option>
+        <option value="Asia/Kolkata" data-flag="in">Delhi</option>
+        <option value="Australia/Sydney" data-flag="au">Sydney</option>
+      </select>
+    </section>
 
-  <section id="clockDisplay">
-    <h2 id="cityName">New York</h2>
-    <p id="time"></p>
-  </section>
+    <section id="clockCard">
+      <img id="cityFlag" src="" alt="Flag" />
+      <h2 id="cityName">New York</h2>
+      <p id="timeDisplay">Loading...</p>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
 </html>
-
