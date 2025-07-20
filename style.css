@@ -1,22 +1,22 @@
 :root {
-  --bg-color: #f4f4f4;
-  --text-color: #333;
-  --card-color: #fff;
+  --bg-color: #f0f0f0;
+  --text-color: #222;
+  --card-bg: #fff;
 }
 
 body.dark {
-  --bg-color: #121212;
-  --text-color: #f0f0f0;
-  --card-color: #1e1e1e;
+  --bg-color: #1e1e1e;
+  --text-color: #ddd;
+  --card-bg: #2c2c2c;
 }
 
 body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", sans-serif;
   margin: 0;
   padding: 20px;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 header {
@@ -25,23 +25,45 @@ header {
   align-items: center;
 }
 
-#themeToggle {
+button#themeToggle {
   padding: 8px 16px;
-  border: none;
   border-radius: 6px;
+  border: none;
+  background: #007bff;
+  color: white;
   cursor: pointer;
 }
 
-.controls {
-  margin-top: 20px;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
 }
 
-#clockDisplay {
-  margin-top: 40px;
-  background-color: var(--card-color);
+.controls {
+  margin-bottom: 30px;
+}
+
+#clockCard {
+  background: var(--card-bg);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   text-align: center;
+  max-width: 300px;
+  width: 100%;
 }
 
+#clockCard img {
+  width: 64px;
+  height: 48px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#timeDisplay {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
