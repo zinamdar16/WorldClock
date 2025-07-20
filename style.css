@@ -1,0 +1,47 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --card-color: #fff;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --card-color: #1e1e1e;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#themeToggle {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+#clockDisplay {
+  margin-top: 40px;
+  background-color: var(--card-color);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
